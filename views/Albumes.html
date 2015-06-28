@@ -1,0 +1,18 @@
+
+<h3>Álbumes Favoritos</h3>
+
+<table class="table table-striped">
+    <tbody>
+    <tr elemento-tabla-albumes-favoritos ng-repeat="album in albumes | orderBy:['year','title']" model="album">
+    </tr>
+    </tbody>
+</table>
+
+<h3>Todos los álbumes</h3>
+
+<table class="table table-striped">
+    <tbody>
+    <tr elemento-tabla-albumes ng-repeat="album in albumes | orderBy:['year','title']" model="album">
+    </tr>
+    </tbody>
+</table>

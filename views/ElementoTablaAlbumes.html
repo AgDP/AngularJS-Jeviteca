@@ -1,0 +1,14 @@
+
+<tr>
+    <td>
+        <img ng-src="resources/img/{{ ::model.image }}" width="100px" height="100px" style="border-radius: 800px">
+    </td>
+    <td>
+        <a ng-href="#/albumes/{{ ::model.id }}/detalles">{{ ::model.title }}</a>
+    </td>
+    <td>{{ ::model.band.name }}</td>
+    <td>{{ ::model.year }}</td>
+    <td>
+        <span favoritos id-albumes="model.id"></span>
+    </td>
+</tr>

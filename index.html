@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="jeviteca">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="styles/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/css/myStyle.css">
+    <script src="vendors/angular.min.js"></script>
+    <script src="vendors/angular-route.min.js"></script>
+    <script src="vendors/angular-route-segment.min.js"></script>
+    <script src="vendors/angular-locale_es-es.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/NavegacionController.js"></script>
+    <script src="scripts/controllers/AlbumesController.js"></script>
+    <script src="scripts/controllers/BandasController.js"></script>
+    <script src="scripts/controllers/GenerosController.js"></script>
+    <script src="scripts/controllers/DetalleAlbumes.js"></script>
+    <script src="scripts/services/AlbumesProvider.js"></script>
+    <script src="scripts/services/BandasProvider.js"></script>
+    <script src="scripts/services/GenerosProvider.js"></script>
+    <script src="scripts/directives/ElementoTabla.js"></script>
+    <script src="scripts/directives/Favoritos.js"></script>
+    <script src="scripts/filters/Instrumentos.js"></script>
+    <script src="scripts/filters/OrigenBanda.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>JEVITECA</h1>
+    </header>
+    <nav ng-controller="NavegacionController">
+        <ul class="nav nav-tabs">
+            <li role="presentation" ng-class="{ 'active' : rutaEsAlbumes() }">
+                <a href="#/albumes">Álbumes</a>
+            </li>
+            <li role="presentation" ng-class="{ 'active' : rutaEsBandas() }">
+                <a href="#/bandas">Bandas</a>
+            </li>
+            <li role="presentation" ng-class="{ 'active' : rutaEsGeneros() }">
+                <a href="#/generos">Géneros</a>
+            </li>
+        </ul>
+    </nav>
+    <section app-view-segment="0"></section>
+</div>
+
+</body>
+</html>
