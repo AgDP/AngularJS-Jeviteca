@@ -46,7 +46,6 @@ angular
             templateUrl: "views/DetalleAlbumes.html",
             resolve: {
                 AlbumesDetalle: ["AlbumesProvider", "$routeParams", function(AlbumesProvider,$routeParams){
-                    debugger;
                     return AlbumesProvider.getAlbumesById($routeParams.id);
                 }]
             }

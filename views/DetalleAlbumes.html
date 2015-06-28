@@ -3,9 +3,12 @@
 <article>
 
     <h4>{{ ::album.title }}</h4>
+    <img ng-src="resources/img/{{ ::album.image }}" width="100px" height="100px" style="border-radius: 800px">
     <span>{{ ::album.year }}</span>
-    <img ng-src="resources/img/{{ ::model.image }}" width="100px" height="100px" style="border-radius: 800px">
     <span>{{ ::album.band.name }}</span>
     <span>{{ ::album.genre.name }}</span>
+
+    <h5>TrackList</h5>
+    {{ ::album.tracklist | tracklist }}
 
 </article>
