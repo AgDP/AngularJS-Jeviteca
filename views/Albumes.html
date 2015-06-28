@@ -1,4 +1,7 @@
 
+<span> BUSCAR: </span>
+<input type="text" ng-model="search" ng-change="findValue(search)"/>
+
 <h3>Álbumes Favoritos</h3>
 
 <table class="table table-striped">
@@ -16,3 +19,5 @@
     </tr>
     </tbody>
 </table>
+
+<div ng-model="albumesPrincipal"></div>

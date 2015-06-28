@@ -3,10 +3,22 @@
 <article>
 
     <h4>{{ ::banda.name }}</h4>
-    <span>{{ ::banda.origin }}</span>
-    <span>{{ ::banda.members.name }}</span>
-    <span>{{ ::banda.albums.title }}</span>
+    <ul>
+        <li>
+            <span>Origen: {{ ::banda.origin }}</span>
+        </li>
 
+        <li>
+            <span>Miembros: {{ ::banda.members | miembros}}</span>
+        </li>
+
+        <li>
+            <span>Albums: {{ ::banda.albums | albumsFilter }}</span>
+        </li>
+    </ul>
+
+
+    <h6>WIKIPEDIA</h6>
     <a ng-href="{{ ::wiki }}">GO TO WIKIPEDIA</a>
 
 </article>
