@@ -51,4 +51,16 @@ angular
             }
         });
 
+        $routeSegmentProvider.when( "/bandas/:id/detalles", "detalle_bandas" );
+
+        $routeSegmentProvider.segment( "detalle_bandas", {
+            controller: "DetalleBandas",
+            templateUrl: "views/DetalleBandas.html",
+            resolve: {
+                BandasDetalle: ["BandasProvider", "$routeParams", function(BandasProvider,$routeParams){
+                    return BandasProvider.getBandasById($routeParams.id);
+                }]
+            }
+        });
+
     }]);

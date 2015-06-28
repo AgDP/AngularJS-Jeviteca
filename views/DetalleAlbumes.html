@@ -4,11 +4,12 @@
 
     <h4>{{ ::album.title }}</h4>
     <img ng-src="resources/img/{{ ::album.image }}" width="100px" height="100px" style="border-radius: 800px">
-    <span>{{ ::album.year }}</span>
+    <span>{{ ::album.origin }}</span>
     <span>{{ ::album.band.name }}</span>
     <span>{{ ::album.genre.name }}</span>
 
     <h5>TrackList</h5>
     {{ ::album.tracklist | tracklist }}
 
+    <a ng-href="{{ ::youtube }}">GO TO YOUTUBE</a>
 </article>
